@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   get 'static_pages/help'
   get 'static_pages/about'
   get 'static_pages/contact'
@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
+   root 'sessions#new'
    resources :products
+   resources :categories
   end
 
   resources :products do
