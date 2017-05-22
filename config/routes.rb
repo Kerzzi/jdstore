@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
+    root 'static_pages#about'
     get 'static_pages/about'
     resources :products
     resources :categories
