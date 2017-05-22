@@ -14,6 +14,9 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+               <li><%= link_to(content_tag(:i, '帮助', class: 'fa fa-sign-out'), static_pages_help_path) %></li>
+               <li><%= link_to(content_tag(:i, '关于', class: 'fa fa-sign-out'), static_pages_about_path) %></li>
+               <li><%= link_to(content_tag(:i, '联系', class: 'fa fa-sign-out'), static_pages_contact_path) %></li>
                <li>
                    <%= link_to carts_path do  %>
                       购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
@@ -21,7 +24,7 @@
                </li>
                 <% if !current_user %>
                   <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a></li>
-                  <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li> 
+                  <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li>
                 <% else %>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
