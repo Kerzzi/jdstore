@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-   root 'sessions#new'
    resources :products
    resources :categories
   end
