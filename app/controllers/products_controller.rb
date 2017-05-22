@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
+    fetch_home_data
     @products = Product.all
   end
 
